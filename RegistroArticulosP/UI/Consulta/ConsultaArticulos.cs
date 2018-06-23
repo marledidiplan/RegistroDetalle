@@ -50,8 +50,11 @@ namespace RegistroArticulosP.UI.Consulta
                 case 4:
                     Filtro = a => a.CantidadCotizada.Equals(CriteriotextBox.Text)
                     && (a.FechaVencimiento <= DesdedateTimePicker.Value && a.FechaVencimiento <= HastadateTimePicker.Value);
-                    break;
+                   break;
+
             }
+            ConsultadataGridView.DataSource = BLL.ArticulosBLL.GetList(Filtro);
+
         }
     }
 }

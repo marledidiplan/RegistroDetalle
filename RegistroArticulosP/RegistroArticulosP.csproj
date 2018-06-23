@@ -51,11 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ArticulosBLL.cs" />
+    <Compile Include="BLL\CotizacionBLL.cs" />
     <Compile Include="BLL\PersonaBLL.cs" />
+    <Compile Include="BLL\Repositorio.cs" />
+    <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="DALL\Contexto.cs" />
+    <Compile Include="Entidades\CotizacionDetalle.cs" />
     <Compile Include="Entidades\ArticulosProductos.cs" />
     <Compile Include="Entidades\Cotizacion.cs" />
-    <Compile Include="Entidades\CotizacionDetalle.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -89,6 +92,12 @@
     <Compile Include="UI\Registro\RegistroPersona.Designer.cs">
       <DependentUpon>RegistroPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registro\RegristroCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\RegristroCotizacion.Designer.cs">
+      <DependentUpon>RegristroCotizacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +123,9 @@
     <EmbeddedResource Include="UI\Registro\RegistroPersona.resx">
       <DependentUpon>RegistroPersona.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\RegristroCotizacion.resx">
+      <DependentUpon>RegristroCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -126,7 +138,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DALL\Scripts\Scripts.sql" />
     <None Include="Resources\Cancel_16px.png" />

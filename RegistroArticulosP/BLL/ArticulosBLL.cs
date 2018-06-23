@@ -20,11 +20,9 @@ namespace RegistroArticulosP.BLL
 
             try
             {
-                if (contexto.ArticulosP.Add(articulosProducto) != null)
-                {
+                contexto.ArticulosP.Add(articulosProducto);
                     contexto.SaveChanges();
                     paso = true;
-                }
             }
             catch (Exception)
             {

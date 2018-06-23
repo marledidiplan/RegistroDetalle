@@ -16,6 +16,10 @@ namespace RegistroArticulosP.DALL
 
         public Contexto() : base("ConStr")
             {  }
-        
-    }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        { 
+            base.OnModelCreating(modelBuilder); 
+        }
+
+}
 }
