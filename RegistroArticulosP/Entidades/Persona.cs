@@ -14,7 +14,7 @@ namespace RegistroArticulosP.Entidades
         public string Direccion { get; set;}
         public string Cedula { get; set; }
         public string Telefono { get; set; }
-
+        public DateTime Fecha { get; set; }
         public Persona()
         {
             PersonaId = 0;

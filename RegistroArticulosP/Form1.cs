@@ -35,9 +35,9 @@ namespace RegistroArticulosP
 
         private void cotizacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroCotizacion rc = new RegistroCotizacion();
-            rc.MdiParent = this;
-            rc.Show();
+            RegistroArticulosP.UI.Registro.RegristroCotizacion regristroCotizacion = new RegristroCotizacion();
+            regristroCotizacion.MdiParent = this;
+            regristroCotizacion.Show();
         }
     }
 }

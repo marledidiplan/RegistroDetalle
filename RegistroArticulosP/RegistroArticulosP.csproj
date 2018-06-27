@@ -126,7 +126,9 @@
     <EmbeddedResource Include="UI\Registro\RegristroCotizacion.resx">
       <DependentUpon>RegristroCotizacion.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,9 +144,11 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DALL\Scripts\Scripts.sql" />
     <None Include="Resources\Cancel_16px.png" />
     <None Include="Resources\Save_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DALL\Scripts\Scripts.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

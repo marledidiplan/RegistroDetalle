@@ -134,26 +134,19 @@ namespace RegistroArticulosP.UI.Registro
 
             if (String.IsNullOrWhiteSpace(CantidadtextBox.Text))
             {
-                errorProvider.SetError(ObservacionestextBox, "Introducir una cantidad");
+                errorProvider.SetError(ObservacionestextBox, "No dejar Cantidad vacia");
                 Errores = true;
             }
 
             if (String.IsNullOrWhiteSpace(PreciotextBox.Text))
             {
-                errorProvider.SetError(PreciotextBox, "Debes introducir un precio");
-                Errores = true;
-            }
-
-            if (String.IsNullOrWhiteSpace(ImportetextBox.Text))
-            {
-                errorProvider.SetError(ImportetextBox, "Debes introducir un importe");
+                errorProvider.SetError(PreciotextBox, "No dejar Precio vacio");
                 Errores = true;
             }
 
             if (dataGridView.RowCount == 0)
             {
-                errorProvider.SetError(dataGridView,
-                    " Now");
+                errorProvider.SetError(dataGridView, "Seleccionar todos");
                 Errores = true;
             }
 
@@ -162,12 +155,12 @@ namespace RegistroArticulosP.UI.Registro
         private void LlenarComboBox()
         {
             RepositorioBase<Persona> repository = new RepositorioBase<Persona>(new Contexto());
-            RepositorioBase<ArticulosProductos> repositori = new RepositorioBase<ArticulosProductos>(new Contexto());
+            RepositorioBase<ArticulosProductos> reposito = new RepositorioBase<ArticulosProductos>(new Contexto());
             PersonacomboBox.DataSource = repository.GetList(m => true);
             PersonacomboBox.ValueMember = "PersonaId";
             PersonacomboBox.DisplayMember = "Nombres";
 
-            ArticuloscomboBox.DataSource = repositori.GetList(m => true);
+            ArticuloscomboBox.DataSource = reposito.GetList(m => true);
             ArticuloscomboBox.ValueMember = "ArticuloId";
             ArticuloscomboBox.DisplayMember = "Descripcion";
         }
@@ -194,7 +187,12 @@ namespace RegistroArticulosP.UI.Registro
 
         private void RegristroCotizacion_Load(object sender, EventArgs e)
         {
+            Contexto contexto = new Contexto(); 
+            PersonacomboBox.ValueMember = "Id";
+            PersonacomboBox.DisplayMember = "Nombre";
+            PersonacomboBox.DataSource = contexto.personas.ToList();
 
+           
         }
     }
 

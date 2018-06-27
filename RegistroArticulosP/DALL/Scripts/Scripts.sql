@@ -1,1 +1,3 @@
-CREATE DATABASE ArticulosPersonas
+CREATE DATABASE DetalleDb
+
+

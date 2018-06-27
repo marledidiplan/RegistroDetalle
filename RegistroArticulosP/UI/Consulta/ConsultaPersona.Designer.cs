@@ -94,6 +94,7 @@
             this.Buscarbutton.TabIndex = 25;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // CriteriotextBox
             // 
@@ -107,10 +108,10 @@
             this.FiltrarcomboBox.FormattingEnabled = true;
             this.FiltrarcomboBox.Items.AddRange(new object[] {
             "id ",
-            "Descripcion",
-            "Precio",
-            "Existencia",
-            "Cantiad Cotizada"});
+            "Nombre",
+            "Direccion",
+            "Telefono",
+            "Cedula"});
             this.FiltrarcomboBox.Location = new System.Drawing.Point(67, 31);
             this.FiltrarcomboBox.Name = "FiltrarcomboBox";
             this.FiltrarcomboBox.Size = new System.Drawing.Size(121, 21);
@@ -151,6 +152,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ConsultaPersona";
             this.Text = "ConsultaPersona";
+            this.Load += new System.EventHandler(this.ConsultaPersona_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
